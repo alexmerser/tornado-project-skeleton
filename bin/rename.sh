@@ -20,7 +20,10 @@ fi
 set -x
 
 mv ${__dir}/src/python_project_skeleton/ ${__dir}/src/${name//-/_}
-sed -i "s/python_project_skeleton/${name//-/_}/g" ${__dir}/src/${name//-/_}/main.py
-sed -i "s/python_project_skeleton/${name//-/_}/g" ${__dir}/setup.py
-sed -i "s/python_project_skeleton/${name//-/_}/g" ${__dir}/MANIFEST.in
-sed -i "s/python-project-skeleton/${name//_/-}/g" ${__dir}/README.md
+sed -i "s/tornado_project_skeleton/${name//-/_}/g" ${__dir}/src/${name//-/_}/main.py
+sed -i "s/tornado_project_skeleton/${name//-/_}/g" ${__dir}/setup.py
+sed -i "s/tornado_project_skeleton/${name//-/_}/g" ${__dir}/MANIFEST.in
+sed -i "s/tornado_project_skeleton/${name//-/_}/g" ${__dir}/bin/main.sh
+
+sed -i "s/tornado-project-skeleton/${name//_/-}/g" ${__dir}/README.md
+sed -i "s/tornado-project-skeleton/${name//_/-}/g" ${__dir}/setup.py
