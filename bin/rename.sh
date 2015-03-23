@@ -6,7 +6,7 @@ export __dir="$( dirname ${__dir} )"
 if [ -z "${1}" ]
 then
     echo -n "Name: "
-    input name
+    read name
 else
     name=${1}
 fi
@@ -19,8 +19,8 @@ fi
 
 set -x
 
-mv ${__dir}/src/python_project_skeleton/ ${__dir}/src/${name}
-sed -i "s/python_project_skeleton/${name}/g" ${__dir}/src/${name}/main.py
-sed -i "s/python_project_skeleton/${name}/g" ${__dir}/setup.py
-sed -i "s/python_project_skeleton/${name}/g" ${__dir}/MANIFEST.in
-sed -i "s/python-project-skeleton/${name}/g" ${__dir}/README.md
+mv ${__dir}/src/python_project_skeleton/ ${__dir}/src/${name//-/_}
+sed -i "s/python_project_skeleton/${name//-/_}/g" ${__dir}/src/${name//-/_}/main.py
+sed -i "s/python_project_skeleton/${name//-/_}/g" ${__dir}/setup.py
+sed -i "s/python_project_skeleton/${name//-/_}/g" ${__dir}/MANIFEST.in
+sed -i "s/python-project-skeleton/${name//_/-}/g" ${__dir}/README.md
